@@ -54,7 +54,7 @@ To utilize GitLab4J&trade; API in your Java project, simply add the following de
 ```java
 dependencies {
     ...
-    compile group: 'org.gitlab4j', name: 'gitlab4j-api', version: '4.14.27'
+    compile group: 'org.gitlab4j', name: 'gitlab4j-api', version: '4.14.28'
 }
 ```
 
@@ -65,7 +65,7 @@ dependencies {
 <dependency>
     <groupId>org.gitlab4j</groupId>
     <artifactId>gitlab4j-api</artifactId>
-    <version>4.14.27</version>
+    <version>4.14.28</version>
 </dependency>
 ```
 
@@ -305,6 +305,7 @@ The following is a list of the available sub APIs along with a sample use of eac
 &nbsp;&nbsp;[SessionApi](#sessionapi)<br/>
 &nbsp;&nbsp;[SnippetsApi](#snippetsapi)<br/>
 &nbsp;&nbsp;[SystemHooksApi](#systemhooksapi)<br/>
+&nbsp;&nbsp;[TagsApi](#tagsapi)<br/>
 &nbsp;&nbsp;[TodosApi](#todosapi)<br/>
 &nbsp;&nbsp;[UserApi](#userapi)<br/>
 &nbsp;&nbsp;[WikisApi](#wikisapi)
@@ -569,6 +570,12 @@ List<Snippet> snippets = gitLabApi.getSnippetsApi().getSnippets();
 ```java
 // Get a list of installed system hooks
 List<SystemHook> hooks = gitLabApi.getSystemHooksApi().getSystemHooks();
+```
+
+#### TagsApi
+```java
+// Get a list of tags for the specified project ID
+List<Tag> tags = gitLabApi.getTagsApi().getTags(projectId);
 ```
 
 #### TodosApi
